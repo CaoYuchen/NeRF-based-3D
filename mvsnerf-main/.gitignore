@@ -128,5 +128,13 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-data/
-CMU/
+# dataset
+xgaze/
+
+# logs
+results/
+runs_fine_tuning/
+.vscode/
+
+# vim ctags file
+tags
