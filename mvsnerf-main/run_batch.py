@@ -3,7 +3,7 @@ import os
 cuda = 0
 N_samples = 128
 N_importance = 0
-batch_size = 1024
+batch_size = 16
 epoches = 8
 
 ####################   train general model   #################################
