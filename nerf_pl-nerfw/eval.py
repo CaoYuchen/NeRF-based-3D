@@ -170,7 +170,7 @@ if __name__ == "__main__":
             # select appearance embedding, hard-coded for each scene
             dataset.test_appearance_idx = 1123 # 85572957_6053497857.jpg
             N_frames = 30*4
-            dx = np.linspace(0, 0.03, N_frames)
+            dx = np.linspace(-0.1, 0.1, N_frames)
             dy = np.linspace(0, -0.1, N_frames)
             dz = np.linspace(0, 0.5, N_frames)
             # define poses
