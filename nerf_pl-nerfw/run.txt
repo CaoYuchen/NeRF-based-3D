@@ -25,6 +25,34 @@ ckpts/scale2_epoch.29.ckpt
 240
 
 
+--root_dir
+E:\NeRF-based-3D\CMU\NERF-W\MMCH
+--dataset_name
+phototourism
+--scene_name
+brandenburg_gate
+--split
+test
+--N_samples
+64
+--N_importance
+64
+--beta_min
+0.03
+--N_vocab
+1500
+--N_emb_xyz
+15
+--encode_a
+--encode_t
+--ckpt_path
+ckpts/mmch/epoch=19.ckpt
+--chunk
+16384
+--img_wh
+320
+240
+
 
 
 --root_dir

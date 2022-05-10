@@ -182,6 +182,25 @@ if __name__ == "__main__":
                     dataset.poses_test[i, 0, 3] += dx[i]
                     dataset.poses_test[i, 1, 3] += dy[i]
                     dataset.poses_test[i, 2, 3] += dz[i]
+        if scene == 'MMCH':
+            # select appearance embedding, hard-coded for each scene
+            dataset.test_appearance_idx = 95 # 85572957_6053497857.jpg
+            N_frames = 30*4
+            dx = np.linspace(-0.2, 0.2, int(N_frames))
+            dy = np.linspace(0.02, -0.05, int(N_frames/2))
+            dz = np.linspace(0.1, 0.2, int(N_frames/2))
+            # dx = np.linspace(0, -0.01, N_frames)
+            # dy = np.linspace(0, -0.03, N_frames)
+            # dz = np.linspace(0, 0.3, N_frames)
+            # dx = np.append(dx, np.linspace(0.1, -0.1, int(N_frames / 2)))
+            dy = np.append(dy, np.linspace(-0.05, 0.02, int(N_frames / 2)))
+            dz = np.append(dz, np.linspace(0.2, 0.1, int(N_frames / 2)))
+            # define poses
+            dataset.poses_test = np.tile(dataset.poses_dict[95], (N_frames, 1, 1))
+            for i in range(N_frames):
+                    dataset.poses_test[i, 0, 3] += dx[i]
+                    dataset.poses_test[i, 1, 3] += dy[i]
+                    dataset.poses_test[i, 2, 3] += dz[i]
         else:
             raise NotImplementedError
         kwargs['output_transient'] = False

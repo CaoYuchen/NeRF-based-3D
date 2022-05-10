@@ -57,8 +57,10 @@ class PhototourismDataset(Dataset):
         else:
             imdata = read_images_binary(os.path.join(self.root_dir, 'dense/sparse/images.bin'))
             img_path_to_id = {}
+            camera_id = {}
             for v in imdata.values():
                 img_path_to_id[v.name] = v.id
+                camera_id[v.id] = v.camera_id
             self.img_ids = []
             self.image_paths = {} # {id: filename}
             for filename in list(self.files['filename']):
@@ -86,7 +88,7 @@ class PhototourismDataset(Dataset):
             #     self.Ks[id_] = K
             for id_ in self.img_ids:
                 K = np.zeros((3, 3), dtype=np.float32)
-                cam = camdata[id_]
+                cam = camdata[camera_id[id_]]
                 img_w, img_h = int(cam.params[1]*2), int(cam.params[2]*2)
                 img_w_, img_h_ = img_w//self.img_downscale, img_h//self.img_downscale
                 K[0, 0] = cam.params[0]*img_w_/img_w # fx
