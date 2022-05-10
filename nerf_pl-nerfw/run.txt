@@ -1,7 +1,7 @@
 #phototourism testing
 
 --root_dir
-./data/brandenburg_gate
+E:\NeRF-based-3D\CMU\NERF-W\brandenburg_gate
 --dataset_name
 phototourism
 --scene_name
@@ -28,7 +28,7 @@ ckpts/scale2_epoch.29.ckpt
 
 
 --root_dir
-./data/hotdog
+E:\NeRF-based-3D\CMU\NERF-W\hotdog
 --dataset_name
 blender
 --split
@@ -49,7 +49,7 @@ nerfw_all
 
 
 --root_dir
-./data/hotdog
+E:\NeRF-based-3D\CMU\NERF-W\hotdog
 --dataset_name
 blender
 --img_wh
@@ -73,7 +73,7 @@ hotdog-real
 --dataset_name
 blender
 --root_dir
-./data/hotdog
+E:\NeRF-based-3D\CMU\NERF-W\hotdog
 --N_importance
 64
 --img_wh
@@ -101,7 +101,7 @@ occ
 
 
 --root_dir
-./data/MMCH
+E:\NeRF-based-3D\CMU\NERF-W\MMCH
 --dataset_name
 phototourism
 --img_downscale
@@ -135,6 +135,6 @@ mmch
 
 
 --root_dir
-./data/MMCH
+E:\NeRF-based-3D\CMU\NERF-W\MMCH
 --img_downscale
 8
